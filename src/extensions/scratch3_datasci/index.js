@@ -3,7 +3,7 @@ const ArgumentType = require('../../extension-support/argument-type');
 const TargetType = require('../../extension-support/target-type');
 
 class Scratch3DataSciBlocks {
-    constructor(runtime) {
+    constructor (runtime) {
         // put any setup for your extension here
         console.log('shiii');
     }
@@ -16,7 +16,7 @@ class Scratch3DataSciBlocks {
      * Returns the metadata about your extension.
      * @returns {object} metadata about the extension
      */
-    getInfo() {
+    getInfo () {
         return {
             // unique ID for your extension
             id: 'datasci',
@@ -72,7 +72,7 @@ class Scratch3DataSciBlocks {
                             //     ArgumentType.NUMBER - numeric value
                             //     ArgumentType.STRING - text value
                             //     ArgumentType.NOTE - midi music value with a piano picker
-                            type: ArgumentType.NUMBER,
+                            type: ArgumentType.NUMBER
                         },
                         MY_STRING: {
                             // default value before the user sets something
@@ -85,11 +85,11 @@ class Scratch3DataSciBlocks {
                             //     ArgumentType.NUMBER - numeric value
                             //     ArgumentType.STRING - text value
                             //     ArgumentType.NOTE - midi music value with a piano picker
-                            type: ArgumentType.STRING,
-                        },
-                    },
-                },
-            ],
+                            type: ArgumentType.STRING
+                        }
+                    }
+                }
+            ]
         };
     }
 
@@ -101,9 +101,9 @@ class Scratch3DataSciBlocks {
      * @param {string} args.MY_STRING - the string argument
      * @returns {string} the result of the block
      */
-    myFirstBlock({ MY_NUMBER, MY_STRING }) {
+    myFirstBlock ({MY_NUMBER, MY_STRING}) {
         // example implementation to return a string
-        return MY_STRING + ' : doubled would be ' + MY_NUMBER * 2;
+        return `${MY_STRING} : doubled would be ${MY_NUMBER * 2}`;
     }
 }
 
